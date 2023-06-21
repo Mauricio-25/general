@@ -1,0 +1,201 @@
+
+/* ! --------------------------------------------------------------------------------------------------------------------------------------------
+!                                                             SECCION HEADER
+! --------------------------------------------------------------------------------------------------------------------------------------------- */
+
+/* ?  --------------------------------------------------------- VERSION PC -------------------------------------------------------------------- */
+/* * Comentario */
+.header {
+    display: flex;
+    justify-content: center;
+}
+.header__nav {
+    width: 80%;
+    max-width: 1050px;
+    display: flex;
+}
+.header__pestaña {
+    width: 50%;
+    background-color: var(--negro);
+    color: var(--blanco);
+    font-size: var(--h3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: clamp(12px, 1.181vw, 19px);
+    cursor: pointer;
+}
+.header__pestaña-1 {
+    border-radius: clamp(20px, 2.083vw, 30px) 0 0 clamp(20px, 2.083vw, 30px);
+}
+.header__pestaña-2 {
+    border-radius: 0 clamp(20px, 2.083vw, 30px) clamp(20px, 2.083vw, 30px) 0;
+}
+.activado-pestaña {
+    background-color: var(--colorPrimario);
+    font-weight: 600;
+}
+
+/* ?  ------------------------------------------------------- VERSION MOBILE ------------------------------------------------------------------ */
+@media screen and (max-width: 500px) {
+    body {
+        padding-bottom: 110px;
+    }
+    .header {
+        grid-row: 2/3;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        z-index: 10;
+        width: 100%;
+        height: 110px;
+    }
+    .principal {
+        grid-row: 1/2;
+    }
+    .header__nav {
+        width: 100%;
+    }
+    .header__pestaña {
+        border-radius: 0;
+    }
+}
+
+
+
+/* ! --------------------------------------------------------------------------------------------------------------------------------------------
+!                                                             SECCION MAIN
+! --------------------------------------------------------------------------------------------------------------------------------------------- */
+
+/* ?  --------------------------------------------------------- VERSION PC -------------------------------------------------------------------- */
+/* * Comentario */
+.principal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: clamp(0px, 2.778vw, 40px);
+    padding-top: clamp(40px, 5.556vw, 80px);
+}
+.h1, .h1-web {
+    background-image: linear-gradient(to right, var(--colorPrimario), var(--negro));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: none;
+    padding-top: 40px;
+    text-align: center;
+    padding-bottom: 10px;
+}
+.h1-web {
+    display: block;
+    padding-top: 0;
+}
+.contenedor {
+    width: 90%;
+    max-width: 1180px;
+    gap: clamp(30px, 3.125vw, 45px);
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+.contenedor__card {
+    height: clamp(150px, 17.361vw, 250px);
+    border-radius: 20px;
+    position: relative;
+    transition: 0.7s;
+    overflow: hidden;
+}
+    /* * Hover */
+    .contenedor__card:hover {
+        background-color: var(--negro);
+    }
+    .contenedor__card:hover .contenedor__hover {
+        opacity: 1;
+        z-index: 2;
+    }
+    .contenedor__card:hover .contenedor__span {
+        background: transparent;
+        box-shadow: none;
+    }
+.contenedor__span {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: absolute;
+    z-index: 2;
+    background-color: var(--blanco);
+    box-shadow: var(--sombra);
+    border-radius: 20px;
+    transition: 0.7s;
+    
+    padding: clamp(12px, 1.389vw, 20px);
+}
+
+.contenedor__hover {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 1;
+    opacity: 0;
+    transition: 0.7s;
+    
+    padding: clamp(12px, 1.389vw, 20px);
+}
+.contenedor__a {
+    display: inline-block;
+    background-color: var(--colorPrimario);
+    padding: 10px;
+    width: 30%;
+    color: var(--blanco);
+    border-radius: 25px;
+}
+
+.contenido__ul {
+    margin-left: clamp(35px, 3.472vw, 50px);
+    padding-top: 10px;
+}
+
+.botonVisitar {
+    display: inline-block;
+    background-color: var(--colorPrimario);
+    padding: 10px;
+    width: 30%;
+    color: var(--blanco);
+    border-radius: 25px;
+    text-align: center;
+    margin-top: 20px;
+}
+.botonVisitar:hover {
+    background-color: var(--colorSecundario);
+}
+
+/* ?  ------------------------------------------------------- VERSION MOBILE ------------------------------------------------------------------ */
+@media screen and (max-width: 500px) {
+    .principal {
+        overflow-y: auto;
+    }
+    .contenedor {
+        width: 100%;
+        grid-template-columns: 1fr;
+        padding-bottom: 40px;
+    }
+    .h1 {
+        display: block;
+    }
+    .botonVisitar {
+        width: 100%;
+    }
+    .principal {
+        padding-top: 0;
+    }
+    .h1-web {
+        padding-top: clamp(40px, 6.25vw, 90px);
+    }
+}
+

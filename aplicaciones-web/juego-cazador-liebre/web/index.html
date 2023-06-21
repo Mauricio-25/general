@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La liebre y los cazadores</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../../css/estilos-generales.css">
+    <link rel="stylesheet" type="text/css" href="css/estilos.css">
+</head>
+<body>
+    <div class="contenedor">
+        <div class="ctrl_Caz">
+            <div class="caz3">
+                <div class="e1"></div>
+                <div class="e2"></div>
+                <div class="e3"></div>
+                <div class="e4"><div class="teclasCaz" onclick="movIzqCaz3()"></div></div>
+                <div class="e5"><div class="e5caz">3</div></div>
+                <div class="e6"><div class="teclasCaz" onclick="movDerCaz3()"></div></div>
+                <div class="e7"><div class="teclasCaz" onclick="movIzqAbaCaz3()"></div></div>
+                <div class="e8"><div class="teclasCaz" onclick="movAbaCaz3()"></div></div>
+                <div class="e9"><div class="teclasCaz" onclick="movDerAbaCaz3()"></div></div>
+            </div>
+
+            <div class="caz2">
+                <div class="e1"></div>
+                <div class="e2"></div>
+                <div class="e3"></div>
+                <div class="e4"><div class="teclasCaz" onclick="movIzqCaz2()"></div></div>
+                <div class="e5"><div class="e5caz">2</div></div>
+                <div class="e6"><div class="teclasCaz" onclick="movDerCaz2()"></div></div>
+                <div class="e7"><div class="teclasCaz" onclick="movIzqAbaCaz2()"></div></div>
+                <div class="e8"><div class="teclasCaz" onclick="movAbaCaz2()"></div></div>
+                <div class="e9"><div class="teclasCaz" onclick="movDerAbaCaz2()"></div></div>
+            </div>
+
+            <div class="caz1">
+                <div class="e1"></div>
+                <div class="e2"></div>
+                <div class="e3"></div>
+                <div class="e4"><div class="teclasCaz" onclick="movIzqCaz1()"></div></div>
+                <div class="e5"><div class="e5caz">1</div></div>
+                <div class="e6"><div class="teclasCaz" onclick="movDerCaz1()"></div></div>
+                <div class="e7"><div class="teclasCaz" onclick="movIzqAbaCaz1()"></div></div>
+                <div class="e8"><div class="teclasCaz" onclick="movAbaCaz1()"></div></div>
+                <div class="e9"><div class="teclasCaz" onclick="movDerAbaCaz1()"></div></div>
+            </div>
+        </div>
+
+        <div class="tablero">
+            <div class="p p11">2</div>
+            <div class="g g7">
+                <div class="l l20"></div>
+                <div class="l l21"></div>
+                <div class="l l22"></div>
+            </div>
+            <div class="g g6">
+                <div class="p p8">3</div>
+                <div class="l l18"></div>
+                <div class="p p9"></div>
+                <div class="l l19"></div>
+                <div class="p p10">1</div>
+            </div>
+            <div class="g g5">
+                <div class="l l13"></div>
+                <div class="l l14"></div>
+                <div class="l l15"></div>
+                <div class="l l16"></div>
+                <div class="l l17"></div>
+            </div>
+            <div class="g g4">
+                <div class="p p5"></div>
+                <div class="l l11"></div>
+                <div class="p p6"></div>
+                <div class="l l12"></div>
+                <div class="p p7"></div>
+            </div>
+            <div class="g g3">
+                <div class="l l6"></div>
+                <div class="l l7"></div>
+                <div class="l l8"></div>
+                <div class="l l9"></div>
+                <div class="l l10"></div>
+            </div>
+            <div class="g g2">
+                <div class="p p2"></div>
+                <div class="l l4"></div>
+                <div class="p p3"></div>
+                <div class="l l5"></div>
+                <div class="p p4"></div>
+            </div>
+            <div class="g g1">
+                <div class="l l1"></div>
+                <div class="l l2"></div>
+                <div class="l l3"></div>
+            </div>
+            <div class="p p1"></div>
+        </div>
+
+        <div class="ctrl_lie">
+            <div class="lie1">
+                <div class="e1"><div onclick="movIzqArrLie()"></div></div>
+                <div class="e2"><div onclick="movArrLie()"></div></div>
+                <div class="e3"><div onclick="movDerArrLie()"></div></div>
+                <div class="e4"><div onclick="movIzqLie()"></div></div>
+                <div class="e5"></div>
+                <div class="e6"><div onclick="movDerLie()"></div></div>
+                <div class="e7"><div onclick="movIzqAbaLie()"></div></div>
+                <div class="e8"><div onclick="movAbaLie()"></div></div>
+                <div class="e9"><div onclick="movDerAbaLie()"></div></div>
+            </div>
+        </div>
+
+        <div class="cont-turno cont-turno1">Turno: 1</div>
+        <div class="cont-turno cont-turno2">Turno: 1</div>
+    </div>
+
+    <div class="cont-lie">
+        <div>
+            <div>
+                ¡GANÓ LA LIEBRE!
+            </div>
+        </div>
+    </div>
+
+    <div class="cont-caz">
+        <div>
+            <div>
+                ¡GANÓ LOS CAZADORES!
+            </div>
+        </div>
+    </div>
+
+    <script src="codigo.js"></script>
+
+</body>
+</html>

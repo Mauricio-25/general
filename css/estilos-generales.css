@@ -1,0 +1,72 @@
+/* TODO VARIABLES */
+:root {
+    /* * Estilos de los textos */
+    --h1: clamp(32px, 3.125vw, 45px);
+    --h2: clamp(25px, 2.5vw, 36px);
+    --h3: clamp(20px, 1.944vw, 28px);
+    --p: clamp(16px, 1.389vw, 20px);
+
+    /* * Estilos de Colores */
+    --colorPrimario: #FD1841;
+    --colorSecundario: #DB0027;
+    --colorDegradadoBlanco: linear-gradient(135deg, rgba(240,240,240,1) 0%, rgba(79,78,78,1) 100%);
+    --sombra: inset -4px -4px 2px var(--plomo);
+
+    --negro: #1F1F1F;
+    --plomo: #4F4E4E;
+    --gris: #D8D8D8;
+    --blanco: #F0F0F0;
+
+    /* * otro */
+    --colum1: calc(var(--colum1-2) - 20px);
+    --colum1-2: calc(100vw/8);
+}
+
+
+/* TODO ESTILOS GENERALES */
+* {
+    font-family: 'Poppins', sans-serif;
+    font-size: var(--p);
+    font-weight: 400;
+    color: var(--negro);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--colorDegradadoBlanco);
+    padding: clamp(20px, 4.514vw, 65px) var(--colum1);
+    min-height: 100vh;
+}
+h1 {
+    font-size: var(--h1);
+    font-weight: 900;
+    margin-top: 0;
+}
+h2 {
+    font-size: var(--h2);
+    font-weight: 700;
+    text-align: center;
+}
+h3 {
+    font-size: var(--h3);
+    font-weight: 600;
+}
+section {
+    padding: clamp(70px, 6.94vw, 120px) var(--colum1); /* 100px */
+    padding-bottom: clamp(90px, 8.33vw, 140px); /* 120px */
+}
+a {
+    text-decoration: none;
+}
+img {
+    object-fit: contain;
+}
+nav {
+    list-style: none;
+}
+ol, ul {
+    margin-left: 1em;
+}

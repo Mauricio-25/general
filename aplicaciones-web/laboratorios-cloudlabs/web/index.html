@@ -1,0 +1,918 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="icon" href="img/icono.png">
+	    <meta name="author" content="Mauricio Soto">
+	    <meta name="copyright" content="Mauricio Soto">
+        <title>Laboratorios CL</title>
+	    <meta name="description" content="">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta http-equiv="Content-Language" content="es">
+        <meta name="language" content="es"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Archivos CSS-->
+		<link rel="stylesheet" type="text/css" href="css/normalize.css">
+		<link rel="stylesheet" type="text/css" href="css/estilos.css">
+
+        <!-- Tipografía -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <!--<link href="https://fonts.googleapis.com/css2?family=Dosis&display=swap" rel="stylesheet">-->
+        <link href="https://fonts.googleapis.com/css2?family=Signika&display=swap" rel="stylesheet">
+
+
+        <!-- Para poder colocar iconos-->
+		<script src="https://kit.fontawesome.com/745852fa0a.js" crossorigin="anonymous"></script>
+
+    </head>
+    <body>
+        <h1>LABORATORIOS CLOUDLABS</h1>
+        <div class="labs">
+            <div class="lab">
+                <h2>Laboratorio 02 - Semana 03</h2>
+    
+                <div class="contenedor-datos"><h3>Datos Requeridos</h3><i class="fas fa-trash-alt" onclick="limpiar2()"></i></div>
+                <div class="datos tabla">
+                    <div class="datos-elementos">
+                        <div class="texto">Indice de Refracción</div>
+                        <div class="dosPuntos">:</div>
+                        <div class="input"><input type="number" class="dato1"><i class="fas fa-info-circle"></i></div>
+                    </div>
+                    <div class="datos-elementos">
+                        <div class="texto">Tamaño del Objeto</div>
+                        <div class="dosPuntos">:</div>
+                        <div class="input"><input type="number" class="dato2"><i class="fas fa-info-circle"></i></div>
+                    </div>
+                    <div class="datos-elementos">
+                        <div class="texto">Distancia entre el Objeto y el espejo (cm)</div>
+                        <div class="dosPuntos">:</div>
+                        <div class="input"><input type="number" class="dato3"><i class="fas fa-info-circle"></i></div>
+                    </div>
+                    <div class="datos-elementos">
+                        <div class="texto">Distancia de la imagen invertida (cm)</div>
+                        <div class="dosPuntos">:</div>
+                        <div class="input"><input type="number" class="dato4"><i class="fas fa-info-circle"></i></div>
+                    </div>
+                </div>
+    
+                <div class="contenedor-calcular"><input type="submit" class="calcular" value="Calcular" onclick="calcular2()"></div>
+    
+                <h3>Resultados</h3>
+                <div class="resultados tabla">
+                    <div class="datos-elementos">
+                        <div class="texto">Distancia Focal (cm)</div>
+                        <div class="dosPuntos">:</div>
+                        <div class="input"><input type="number" class="res1" readonly></div>
+                    </div>
+                    <div class="datos-elementos">
+                        <div class="texto">Radio de Curvatura (cm)</div>
+                        <div class="dosPuntos">:</div>
+                        <div class="input"><input type="number" class="res2" readonly></div>
+                    </div>
+                    <div class="datos-elementos">
+                        <div class="texto">Potencia del Lente (D)</div>
+                        <div class="dosPuntos">:</div>
+                        <div class="input"><input type="number" class="res3" readonly></div>
+                    </div>
+                    <div class="datos-elementos">
+                        <div class="texto">Tamaño de la Imagen (cm)</div>
+                        <div class="dosPuntos">:</div>
+                        <div class="input"><input type="number" class="res4" readonly></div>
+                    </div>
+                    <div class="datos-elementos">
+                        <div class="texto">Aumento de la imagen</div>
+                        <div class="dosPuntos">:</div>
+                        <div class="input"><input type="number" class="res5" readonly></div>
+                    </div>
+                    <div class="datos-elementos">
+                        <div class="texto">Característica de la imagen</div>
+                        <div class="dosPuntos">:</div>
+                        <div class="input"><input type="text" class="res6" readonly></div>
+                    </div>
+                </div>
+                
+                <h3>Preguntas Conceptuales</h3>
+                <div class="preguntas tabla">
+                    <p><b>Pregunta 1:</b> Las características de la imagen son:</p>
+                    <span><b>Resultado:</b> Real e invertida</span>
+                    <br><br>
+                    <p><b>Pregunta 2:</b> La potencia tiene un valor de:</p>
+                    <span><b>Resultado:</b> 6.25 D.</span>
+                    <br><br>
+                    <p><b>Pregunta 3:</b> La lente convergente mostrada en la imagen es de tipo:</p>
+                    <span><b>Resultado:</b> Biconvexa</span>
+                </div>
+            </div>
+
+            <div class="lab">
+                <h2>Laboratorio 03 - Semana 05</h2>
+    
+                <div class="contenedor-datos"><h3>Datos Requeridos</h3><i class="fas fa-trash-alt" onclick="limpiar3()"></i></div>
+                <div class="datos tabla">
+                    <div class="datos-elementos">
+                        <div class="texto">Amperímetro de resistencia</div>
+                        <div class="dosPuntos">:</div>
+                        <div class="input"><input type="number" class="dato5"><i class="fas fa-info-circle" onclick="abrir(0)"></i></div>
+                    </div>
+                    <div class="datos-elementos">
+                        <div class="texto">Amperímetro del motor</div>
+                        <div class="dosPuntos">:</div>
+                        <div class="input"><input type="number" class="dato6"><i class="fas fa-info-circle" onclick="abrir(1)"></i></div>
+                    </div>
+                    <div class="datos-elementos">
+                        <div class="texto">Amperímetro del bombillo 1</div>
+                        <div class="dosPuntos">:</div>
+                        <div class="input"><input type="number" class="dato7"><i class="fas fa-info-circle" onclick="abrir(2)"></i></div>
+                    </div>
+                    <div class="datos-elementos">
+                        <div class="texto">Amperímetro del bombillo 2</div>
+                        <div class="dosPuntos">:</div>
+                        <div class="input"><input type="number" class="dato8"><i class="fas fa-info-circle" onclick="abrir(3)"></i></div>
+                    </div>
+                </div>
+    
+                <div class="contenedor-calcular"><input type="submit" class="calcular" value="Calcular" onclick="calcular3()"></div>
+    
+                <h3>Resultados</h3>
+                <div class="resultados tabla">
+                    <p><b>Bombilla 1</b></p>
+                    <div class="datos-elementos">
+                        <div class="texto">Voltaje</div>
+                        <div class="dosPuntos">:</div>
+                        <div class="input"><input type="number" class="res7" readonly></div>
+                    </div>
+                    <div class="datos-elementos">
+                        <div class="texto">Corriente</div>
+                        <div class="dosPuntos">:</div>
+                        <div class="input"><input type="number" class="res8" readonly></div>
+                    </div>
+                    <div class="datos-elementos">
+                        <div class="texto">Potencia</div>
+                        <div class="dosPuntos">:</div>
+                        <div class="input"><input type="number" class="res9" readonly></div>
+                    </div>
+                    <p><b>Bombilla 2</b></p>
+                    <div class="datos-elementos">
+                        <div class="texto">Voltaje</div>
+                        <div class="dosPuntos">:</div>
+                        <div class="input"><input type="number" class="res10" readonly></div>
+                    </div>
+                    <div class="datos-elementos">
+                        <div class="texto">Corriente</div>
+                        <div class="dosPuntos">:</div>
+                        <div class="input"><input type="number" class="res11" readonly></div>
+                    </div>
+                    <div class="datos-elementos">
+                        <div class="texto">Potencia</div>
+                        <div class="dosPuntos">:</div>
+                        <div class="input"><input type="number" class="res12" readonly></div>
+                    </div>
+                    <p><b>Motor</b></p>
+                    <div class="datos-elementos">
+                        <div class="texto">Voltaje</div>
+                        <div class="dosPuntos">:</div>
+                        <div class="input"><input type="number" class="res13" readonly></div>
+                    </div>
+                    <div class="datos-elementos">
+                        <div class="texto">Corriente</div>
+                        <div class="dosPuntos">:</div>
+                        <div class="input"><input type="number" class="res14" readonly></div>
+                    </div>
+                    <div class="datos-elementos">
+                        <div class="texto">Potencia</div>
+                        <div class="dosPuntos">:</div>
+                        <div class="input"><input type="number" class="res15" readonly></div>
+                    </div>
+                    <p><b>Resistencia</b></p>
+                    <div class="datos-elementos">
+                        <div class="texto">Voltaje</div>
+                        <div class="dosPuntos">:</div>
+                        <div class="input"><input type="number" class="res16" readonly></div>
+                    </div>
+                    <div class="datos-elementos">
+                        <div class="texto">Corriente</div>
+                        <div class="dosPuntos">:</div>
+                        <div class="input"><input type="number" class="res17" readonly></div>
+                    </div>
+                    <div class="datos-elementos">
+                        <div class="texto">Potencia</div>
+                        <div class="dosPuntos">:</div>
+                        <div class="input"><input type="number" class="res18" readonly></div>
+                    </div>
+                </div>
+                
+                <h3>Preguntas Conceptuales</h3>
+                <div class="preguntas tabla">
+                    <p><b>Pregunta 1: </b>A mayor corriente en un circuito, mayor potencia disipada en la carga</p>
+                    <span><b>Resultado: </b>V</span>
+                    <br><br>
+                    <p><b>Pregunta 2: </b>Es la batería usada en el laboratorio una FEM</p>
+                    <span><b>Resultado: </b>V</span>
+                    <br><br>
+                    <p><b>Pregunta 3: </b>La cantidad de corriente se relaciona con el consumo de la carga</p>
+                    <span><b>Resultado: </b>V</span>
+                    <br><br>
+                    <p><b>Pregunta 4: </b>Existe la corriente eléctrica en un circuito sin carga</p>
+                    <span><b>Resultado: </b>F</span>
+                    <br><br>
+                    <p><b>Pregunta 5 :</b>Existe voltaje en el circuto abierto, es decir con el interruptor apagado</p>
+                    <span><b>Resultado: </b>V</span>
+                </div>
+            </div>
+
+
+
+            <div class="lab">
+                <h2>Laboratorio 04 - Semana 06</h2>
+    
+                <div class="contenedor-datos"><h3>Datos Requeridos</h3><i class="fas fa-trash-alt" onclick="limpiar4()"></i></div>
+                <div class="datos tabla">
+                    <p><b>Resistencia R1</b></p>
+                    <div class="datos-elementos">
+                        <div class="texto">Voltaje (V)</div>
+                        <div class="dosPuntos">:</div>
+                        <div class="input"><input type="number" class="dato9"><i class="fas fa-info-circle" onclick="abrir(4)"></i></div>
+                    </div>
+                    <div class="datos-elementos">
+                        <div class="texto">Corriente (mA)</div>
+                        <div class="dosPuntos">:</div>
+                        <div class="input"><input type="number" class="dato10"><i class="fas fa-info-circle" onclick="abrir(5)"></i></div>
+                    </div>
+                    <p><b>Resistencia R2</b></p>
+                    <div class="datos-elementos">
+                        <div class="texto">Voltaje (V)</div>
+                        <div class="dosPuntos">:</div>
+                        <div class="input"><input type="number" class="dato11"><i class="fas fa-info-circle" onclick="abrir(6)"></i></div>
+                    </div>
+                    <div class="datos-elementos">
+                        <div class="texto">Corriente (mA)</div>
+                        <div class="dosPuntos">:</div>
+                        <div class="input"><input type="number" class="dato12"><i class="fas fa-info-circle" onclick="abrir(7)"></i></div>
+                    </div>
+                    <p><b>Resistencia R3</b></p>
+                    <div class="datos-elementos">
+                        <div class="texto">Voltaje (V)</div>
+                        <div class="dosPuntos">:</div>
+                        <div class="input"><input type="number" class="dato13"><i class="fas fa-info-circle" onclick="abrir(8)"></i></div>
+                    </div>
+                    <div class="datos-elementos">
+                        <div class="texto">Corriente (mA)</div>
+                        <div class="dosPuntos">:</div>
+                        <div class="input"><input type="number" class="dato14"><i class="fas fa-info-circle" onclick="abrir(9)"></i></div>
+                    </div>
+                </div>
+    
+                <div class="contenedor-calcular"><input type="submit" class="calcular" value="Calcular" onclick="calcular4()"></div>
+    
+                <h3>Resultados</h3>
+                <div class="resultados tabla">
+                    <p><b>Resistencia R1</b></p>
+                    <div class="datos-elementos">
+                        <div class="texto">Resistencia (Ω)</div>
+                        <div class="dosPuntos">:</div>
+                        <div class="input"><input type="number" class="res19" readonly></div>
+                    </div>
+                    <div class="datos-elementos">
+                        <div class="texto">Voltaje (V)</div>
+                        <div class="dosPuntos">:</div>
+                        <div class="input"><input type="number" class="res20" readonly></div>
+                    </div>
+                    <div class="datos-elementos">
+                        <div class="texto">Corriente (A)</div>
+                        <div class="dosPuntos">:</div>
+                        <div class="input"><input type="number" class="res21" readonly></div>
+                    </div>
+                    <p><b>Resistencia R2</b></p>
+                    <div class="datos-elementos">
+                        <div class="texto">Resistencia (Ω)</div>
+                        <div class="dosPuntos">:</div>
+                        <div class="input"><input type="number" class="res22" readonly></div>
+                    </div>
+                    <div class="datos-elementos">
+                        <div class="texto">Voltaje (V)</div>
+                        <div class="dosPuntos">:</div>
+                        <div class="input"><input type="number" class="res23" readonly></div>
+                    </div>
+                    <div class="datos-elementos">
+                        <div class="texto">Corriente (A)</div>
+                        <div class="dosPuntos">:</div>
+                        <div class="input"><input type="number" class="res24" readonly></div>
+                    </div>
+                    <p><b>Resistencia R3</b></p>
+                    <div class="datos-elementos">
+                        <div class="texto">Resistencia (Ω)</div>
+                        <div class="dosPuntos">:</div>
+                        <div class="input"><input type="number" class="res25" readonly></div>
+                    </div>
+                    <div class="datos-elementos">
+                        <div class="texto">Voltaje (V)</div>
+                        <div class="dosPuntos">:</div>
+                        <div class="input"><input type="number" class="res26" readonly></div>
+                    </div>
+                    <div class="datos-elementos">
+                        <div class="texto">Corriente (A)</div>
+                        <div class="dosPuntos">:</div>
+                        <div class="input"><input type="number" class="res27" readonly></div>
+                    </div>
+                </div>
+                
+                <h3>Preguntas Conceptuales</h3>
+                <div class="preguntas tabla">
+                    <p><b>Pregunta 1: </b>¿Cuál es el voltaje en la resistencia 1?</p>
+                    <span><b>Resultado: </b>8 V</span>
+                    <br><br>
+                    <p><b>Pregunta 2: </b>¿Cuál es el valor de la corriente que circula por la resistencia 3?</p>
+                    <span><b>Resultado: </b>0.001 A</span>
+                    <br><br>
+                    <p><b>Pregunta 3: </b>¿Cuál es el valor de las resistencias 2 y 3 del circuito?</p>
+                    <span><b>Resultado: </b>2 kΩ</span>
+                </div>
+            </div>
+
+
+
+            <div class="lab">
+                <h2>Laboratorio 07 - Semana 11</h2>
+    
+                <div class="contenedor-datos"><h3>Datos Requeridos</h3><i class="fas fa-trash-alt" onclick="limpiar4()"></i></div>
+                <div class="datos tabla">
+                    <div class="datos-elementos">
+                        <div class="texto">Resistencia R1 (Ω)</div>
+                        <div class="dosPuntos">:</div>
+                        <div class="input"><input type="number" class="dato15"><i class="fas fa-info-circle" onclick="abrir(10)"></i></div>
+                    </div>
+                    <div class="datos-elementos">
+                        <div class="texto">Resistencia R2 (Ω)</div>
+                        <div class="dosPuntos">:</div>
+                        <div class="input"><input type="number" class="dato16"><i class="fas fa-info-circle" onclick="abrir(11)"></i></div>
+                    </div>
+                    <div class="datos-elementos">
+                        <div class="texto">Resistencia R3 (Ω)</div>
+                        <div class="dosPuntos">:</div>
+                        <div class="input"><input type="number" class="dato17"><i class="fas fa-info-circle" onclick="abrir(12)"></i></div>
+                    </div>
+                    <div class="datos-elementos">
+                        <div class="texto">Resistencia R4 (Ω)</div>
+                        <div class="dosPuntos">:</div>
+                        <div class="input"><input type="number" class="dato18"><i class="fas fa-info-circle" onclick="abrir(13)"></i></div>
+                    </div>
+                    <div class="datos-elementos">
+                        <div class="texto">Resistencia R5 (Ω)</div>
+                        <div class="dosPuntos">:</div>
+                        <div class="input"><input type="number" class="dato19"><i class="fas fa-info-circle" onclick="abrir(14)"></i></div>
+                    </div>
+                    <div class="datos-elementos">
+                        <div class="texto">Voltaje de la fuente (V)</div>
+                        <div class="dosPuntos">:</div>
+                        <div class="input"><input type="number" class="dato20"><i class="fas fa-info-circle" onclick="abrir(15)"></i></div>
+                    </div>
+                </div>
+    
+                <div class="contenedor-calcular"><input type="submit" class="calcular" value="Calcular" onclick="calcular7()"></div>
+    
+                <h3>Resultados</h3>
+                <div class="resultados tabla">
+                    <p><b>Resistencia 1</b></p>
+                    <div class="datos-elementos">
+                        <div class="texto">Corriente (mA)</div>
+                        <div class="dosPuntos">:</div>
+                        <div class="input"><input type="number" class="res28" readonly></div>
+                    </div>
+                    <div class="datos-elementos">
+                        <div class="texto">Potencia (mW)</div>
+                        <div class="dosPuntos">:</div>
+                        <div class="input"><input type="number" class="res29" readonly></div>
+                    </div>
+
+                    <p><b>Resistencia 2</b></p>
+                    <div class="datos-elementos">
+                        <div class="texto">Corriente (mA)</div>
+                        <div class="dosPuntos">:</div>
+                        <div class="input"><input type="number" class="res30" readonly></div>
+                    </div>
+                    <div class="datos-elementos">
+                        <div class="texto">Potencia (mW)</div>
+                        <div class="dosPuntos">:</div>
+                        <div class="input"><input type="number" class="res31" readonly></div>
+                    </div>
+
+                    <p><b>Resistencia 3</b></p>
+                    <div class="datos-elementos">
+                        <div class="texto">Corriente (mA)</div>
+                        <div class="dosPuntos">:</div>
+                        <div class="input"><input type="number" class="res32" readonly></div>
+                    </div>
+                    <div class="datos-elementos">
+                        <div class="texto">Potencia (mW)</div>
+                        <div class="dosPuntos">:</div>
+                        <div class="input"><input type="number" class="res33" readonly></div>
+                    </div>
+
+                    <p><b>Resistencia 4</b></p>
+                    <div class="datos-elementos">
+                        <div class="texto">Corriente (mA)</div>
+                        <div class="dosPuntos">:</div>
+                        <div class="input"><input type="number" class="res34" readonly></div>
+                    </div>
+                    <div class="datos-elementos">
+                        <div class="texto">Potencia (mW)</div>
+                        <div class="dosPuntos">:</div>
+                        <div class="input"><input type="number" class="res35" readonly></div>
+                    </div>
+
+                    <p><b>Resistencia 5</b></p>
+                    <div class="datos-elementos">
+                        <div class="texto">Corriente (mA)</div>
+                        <div class="dosPuntos">:</div>
+                        <div class="input"><input type="number" class="res36" readonly></div>
+                    </div>
+                    <div class="datos-elementos">
+                        <div class="texto">Potencia (mW)</div>
+                        <div class="dosPuntos">:</div>
+                        <div class="input"><input type="number" class="res37" readonly></div>
+                    </div>
+
+                    <p><b>General</b></p>
+                    <div class="datos-elementos">
+                        <div class="texto">Corriente (mA)</div>
+                        <div class="dosPuntos">:</div>
+                        <div class="input"><input type="number" class="res38" readonly></div>
+                    </div>
+                    <div class="datos-elementos">
+                        <div class="texto">Potencia (mW)</div>
+                        <div class="dosPuntos">:</div>
+                        <div class="input"><input type="number" class="res39" readonly></div>
+                    </div>
+                </div>
+                
+                <h3>Preguntas Conceptuales</h3>
+                <div class="preguntas tabla">
+                    <p><b>Pregunta 1: </b></p>
+                    <span><b>Resultado: </b>I²*R</span>
+                    <br><br>
+                    <p><b>Pregunta 2: </b></p>
+                    <span><b>Resultado: </b>El valor de la resistencia en muy grande</span>
+                    <br><br>
+                    <p><b>Pregunta 3: </b></p>
+                    <span><b>Resultado: </b>(V1/R1) + (V2/R2)</span>
+                    <br><br>
+                    <p><b>Pregunta 4: </b></p>
+                    <span><b>Resultado: </b>No</span>
+                </div>
+            </div>
+
+
+
+            <div class="lab">
+                <h2>Laboratorio 08 - Semana 12</h2>
+    
+                <div class="contenedor-datos"><h3>Datos Requeridos</h3><i class="fas fa-trash-alt" onclick="limpiar4()"></i></div>
+                <div class="datos tabla">
+                    <div class="datos-elementos">
+                        <div class="texto">Resistencia R1 (Ω)</div>
+                        <div class="dosPuntos">:</div>
+                        <div class="input"><input type="number" class="dato21"><i class="fas fa-info-circle" onclick="abrir(10)"></i></div>
+                    </div>
+                    <div class="datos-elementos">
+                        <div class="texto">Resistencia R2 (Ω)</div>
+                        <div class="dosPuntos">:</div>
+                        <div class="input"><input type="number" class="dato22"><i class="fas fa-info-circle" onclick="abrir(11)"></i></div>
+                    </div>
+                    <div class="datos-elementos">
+                        <div class="texto">Resistencia R3 (Ω)</div>
+                        <div class="dosPuntos">:</div>
+                        <div class="input"><input type="number" class="dato23"><i class="fas fa-info-circle" onclick="abrir(12)"></i></div>
+                    </div>
+                    <div class="datos-elementos">
+                        <div class="texto">Resistencia R4 (Ω)</div>
+                        <div class="dosPuntos">:</div>
+                        <div class="input"><input type="number" class="dato24"><i class="fas fa-info-circle" onclick="abrir(13)"></i></div>
+                    </div>
+                    <div class="datos-elementos">
+                        <div class="texto">Resistencia R5 (Ω)</div>
+                        <div class="dosPuntos">:</div>
+                        <div class="input"><input type="number" class="dato25"><i class="fas fa-info-circle" onclick="abrir(14)"></i></div>
+                    </div>
+                    <div class="datos-elementos">
+                        <div class="texto">Voltaje de la fuente (V)</div>
+                        <div class="dosPuntos">:</div>
+                        <div class="input"><input type="number" class="dato26"><i class="fas fa-info-circle" onclick="abrir(15)"></i></div>
+                    </div>
+                </div>
+    
+                <div class="contenedor-calcular"><input type="submit" class="calcular" value="Calcular" onclick="calcular8()"></div>
+    
+                <h3>Resultados</h3>
+                <div class="resultados tabla">
+                    <p><b>Resistencia 1</b></p>
+                    <div class="datos-elementos">
+                        <div class="texto">Voltaje (V)</div>
+                        <div class="dosPuntos">:</div>
+                        <div class="input"><input type="number" class="res40" readonly></div>
+                    </div>
+                    <div class="datos-elementos">
+                        <div class="texto">Potencia (mW)</div>
+                        <div class="dosPuntos">:</div>
+                        <div class="input"><input type="number" class="res41" readonly></div>
+                    </div>
+
+                    <p><b>Resistencia 2</b></p>
+                    <div class="datos-elementos">
+                        <div class="texto">Voltaje (V)</div>
+                        <div class="dosPuntos">:</div>
+                        <div class="input"><input type="number" class="res42" readonly></div>
+                    </div>
+                    <div class="datos-elementos">
+                        <div class="texto">Potencia (mW)</div>
+                        <div class="dosPuntos">:</div>
+                        <div class="input"><input type="number" class="res43" readonly></div>
+                    </div>
+
+                    <p><b>Resistencia 3</b></p>
+                    <div class="datos-elementos">
+                        <div class="texto">Voltaje (V)</div>
+                        <div class="dosPuntos">:</div>
+                        <div class="input"><input type="number" class="res44" readonly></div>
+                    </div>
+                    <div class="datos-elementos">
+                        <div class="texto">Potencia (mW)</div>
+                        <div class="dosPuntos">:</div>
+                        <div class="input"><input type="number" class="res45" readonly></div>
+                    </div>
+
+                    <p><b>Resistencia 4</b></p>
+                    <div class="datos-elementos">
+                        <div class="texto">Voltaje (V)</div>
+                        <div class="dosPuntos">:</div>
+                        <div class="input"><input type="number" class="res46" readonly></div>
+                    </div>
+                    <div class="datos-elementos">
+                        <div class="texto">Potencia (mW)</div>
+                        <div class="dosPuntos">:</div>
+                        <div class="input"><input type="number" class="res47" readonly></div>
+                    </div>
+
+                    <p><b>Resistencia 5</b></p>
+                    <div class="datos-elementos">
+                        <div class="texto">Voltaje (V)</div>
+                        <div class="dosPuntos">:</div>
+                        <div class="input"><input type="number" class="res48" readonly></div>
+                    </div>
+                    <div class="datos-elementos">
+                        <div class="texto">Potencia (mW)</div>
+                        <div class="dosPuntos">:</div>
+                        <div class="input"><input type="number" class="res49" readonly></div>
+                    </div>
+
+                    <p><b>General</b></p>
+                    <div class="datos-elementos">
+                        <div class="texto">Potencia (mW)</div>
+                        <div class="dosPuntos">:</div>
+                        <div class="input"><input type="number" class="res50" readonly></div>
+                    </div>
+                </div>
+                
+                <h3>Preguntas Conceptuales</h3>
+                <div class="preguntas tabla">
+                    <p><b>Pregunta 1: </b></p>
+                    <span><b>Resultado: </b>V²/R</span>
+                    <br><br>
+                    <p><b>Pregunta 2: </b></p>
+                    <span><b>Resultado: </b>0 V</span>
+                    <br><br>
+                    <p><b>Pregunta 3: </b></p>
+                    <span><b>Resultado: </b>0 V</span>
+                    <br><br>
+                    <p><b>Pregunta 4: </b></p>
+                    <span><b>Resultado: </b>No</span>
+                </div>
+            </div>
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- LAB2 -->
+
+
+        <!-- LAB3 -->
+        <div class="info"> <!-- 0 -->
+            <div class="cuadro">
+                <div><h4>¿CÓMO OBTENER EL AMPERÍMETRO DE RESISTENCIA?</h4><i class="fas fa-times-circle" onclick="cerrar(0);"></i></div>
+                <h5>Paso 1:</h5>
+                <p>
+                    Arrastra la batería a su lugar
+                </p>
+                <a href="img/sem3/img1.png"><img src="img/sem3/img1.png"></a>
+                <h5>Paso 2:</h5>
+                <p>
+                    Enciende la máquina
+                </p>
+                <a href="img/sem3/img2.png"><img src="img/sem3/img2.png"></a>
+                <h5>Paso 3:</h5>
+                <p>
+                    Arrastra la resistencia al circuito
+                </p>
+                <a href="img/sem3/img3.png"><img src="img/sem3/img3.png"></a>
+                <h5>Paso 4:</h5>
+                <p>
+                    Copia el valor mostrado
+                </p>
+                <a href="img/sem3/img4.png"><img src="img/sem3/img4.png"></a>
+            </div>
+        </div>
+
+        <div class="info"> <!-- 1 -->
+            <div class="cuadro">
+                <div><h4>¿CÓMO OBTENER EL AMPERÍMETRO DEL MOTOR?</h4><i class="fas fa-times-circle" onclick="cerrar(1);"></i></div>
+                <h5>Paso 1:</h5>
+                <p>
+                    Devuelve el objeto anterior a su lugar y arrastra el motor al cicuito
+                </p>
+                <a href="img/sem3/img5.png"><img src="img/sem3/img5.png"></a>
+                <h5>Paso 2:</h5>
+                <p>
+                    Copia el valor mostrado
+                </p>
+                <a href="img/sem3/img4.png"><img src="img/sem3/img4.png"></a>
+            </div>
+        </div>
+
+        <div class="info"> <!-- 2 -->
+            <div class="cuadro">
+                <div><h4>¿CÓMO OBTENER EL AMPERÍMETRO DEL BOMBILLO 1?</h4><i class="fas fa-times-circle" onclick="cerrar(2);"></i></div>
+                <h5>Paso 1:</h5>
+                <p>
+                    Devuelve el objeto anterior a su lugar y arrastra el bombillo 1 al cicuito
+                </p>
+                <a href="img/sem3/img6.png"><img src="img/sem3/img6.png"></a>
+                <h5>Paso 2:</h5>
+                <p>
+                    Copia el valor mostrado
+                </p>
+                <a href="img/sem3/img4.png"><img src="img/sem3/img4.png"></a>
+            </div>
+        </div>
+
+        <div class="info"> <!-- 3 -->
+            <div class="cuadro">
+                <div><h4>¿CÓMO OBTENER EL AMPERÍMETRO DEL BOMBILLO 2?</h4><i class="fas fa-times-circle" onclick="cerrar(3);"></i></div>
+                <h5>Paso 1:</h5>
+                <p>
+                    Devuelve el objeto anterior a su lugar y arrastra el bombillo 2 al cicuito
+                </p>
+                <a href="img/sem3/img7.png"><img src="img/sem3/img7.png"></a>
+                <h5>Paso 2:</h5>
+                <p>
+                    Copia el valor mostrado
+                </p>
+                <a href="img/sem3/img4.png"><img src="img/sem3/img4.png"></a>
+            </div>
+        </div>
+
+
+        <!-- LAB 4 -->
+
+        <div class="info"> <!-- 4 -->
+            <div class="cuadro">
+                <div><h4>¿CÓMO OBTENER EL VOLTAJE DE R1?</h4><i class="fas fa-times-circle" onclick="cerrar(4);"></i></div>
+                <h5>Pasos:</h5>
+                <p>
+                    (1) Verifica si el voltimetro apunta a "V"<br>
+                    (!) Para poder mover las piezas debe estar apagado la fuente<br>
+                    (2) Ordena las piezas y resistencias como se muestra en la siguiente imagen<br>
+                    (3) Prende la fuente y apunta los datos<br>
+                </p>
+                <a href="img/sem4/img1.png"><img src="img/sem4/img1.png"></a>
+            </div> 
+        </div>
+
+        <div class="info"> <!-- 5 -->
+            <div class="cuadro">
+                <div><h4>¿CÓMO OBTENER LA CORRIENTE DE R1?</h4><i class="fas fa-times-circle" onclick="cerrar(5);"></i></div>
+                <h5>Pasos:</h5>
+                <p>
+                    (1) Verifica si el voltimetro apunta a "A"<br>
+                    (!) Para poder mover las piezas debe estar apagado la fuente<br>
+                    (2) Ordena las piezas y resistencias como se muestra en la siguiente imagen<br>
+                    (3) Prende la fuente y apunta los datos<br>
+                </p>
+                <a href="img/sem4/img2.png"><img src="img/sem4/img2.png"></a>
+            </div>
+        </div>
+
+        <div class="info"> <!-- 6 -->
+            <div class="cuadro">
+                <div><h4>¿CÓMO OBTENER EL VOLTAJE DE R2?</h4><i class="fas fa-times-circle" onclick="cerrar(6);"></i></div>
+                <h5>Pasos:</h5>
+                <p>
+                    (1) Verifica si el voltimetro apunta a "V"<br>
+                    (!) Para poder mover las piezas debe estar apagado la fuente<br>
+                    (2) Ordena las piezas y resistencias como se muestra en la siguiente imagen<br>
+                    (3) Prende la fuente y apunta los datos<br>
+                </p>
+                <a href="img/sem4/img3.png"><img src="img/sem4/img3.png"></a>
+            </div>
+        </div>
+
+        <div class="info"> <!-- 7 -->
+            <div class="cuadro">
+                <div><h4>¿CÓMO OBTENER LA CORRIENTE DE R2?</h4><i class="fas fa-times-circle" onclick="cerrar(7);"></i></div>
+                <h5>Pasos:</h5>
+                <p>
+                    (1) Verifica si el voltimetro apunta a "A"<br>
+                    (!) Para poder mover las piezas debe estar apagado la fuente<br>
+                    (2) Ordena las piezas y resistencias como se muestra en la siguiente imagen<br>
+                    (3) Prende la fuente y apunta los datos<br>
+                </p>
+                <a href="img/sem4/img4.png"><img src="img/sem4/img4.png"></a>
+            </div>
+        </div>
+
+        <div class="info"> <!-- 8 -->
+            <div class="cuadro">
+                <div><h4>¿CÓMO OBTENER EL VOLTAJE DE R3?</h4><i class="fas fa-times-circle" onclick="cerrar(8);"></i></div>
+                <h5></h5>
+                <p>
+                    Es el mismo valor que el voltaje de R2 porque son paralelos<br>
+                </p>
+            </div>
+        </div>
+
+        <div class="info"> <!-- 9 -->
+            <div class="cuadro">
+                <div><h4>¿CÓMO OBTENER LA CORRIENTE DE R3?</h4><i class="fas fa-times-circle" onclick="cerrar(9);"></i></div>
+                <h5>Pasos:</h5>
+                <p>
+                    (1) Verifica si el voltimetro apunta a "A"<br>
+                    (!) Para poder mover las piezas debe estar apagado la fuente<br>
+                    (2) Ordena las piezas y resistencias como se muestra en la siguiente imagen<br>
+                    (3) Prende la fuente y apunta los datos<br>
+                </p>
+                <a href="img/sem4/img5.png"><img src="img/sem4/img5.png"></a>
+            </div>
+        </div>
+
+
+
+        <!-- LAB 7 -->
+
+        <div class="info"> <!-- 10 -->
+            <div class="cuadro">
+                <div><h4>¿CÓMO OBTENER LA RESISTENCIA 1?</h4><i class="fas fa-times-circle" onclick="cerrar(10);"></i></div>
+                <h5>Pasos:</h5>
+                <p>
+                    (1) Verifica si el circuito es el mismo al que se encuentra en la imagen, sino actualiza la página las veces necesarias hasta que sea la misma<br>
+                </p>
+                <a href="img/sem11/img1.png"><img src="img/sem11/img1.png"></a>
+
+                <p>
+                    (2) Coloca los resistores en su lugar<br>
+                </p>
+                <a href="img/sem11/img2.png"><img src="img/sem11/img2.png"></a>
+
+                <p>
+                    (3) Presiona el botón y anota los datos<br>
+                </p>
+                <a href="img/sem11/img3.png"><img src="img/sem11/img3.png"></a>
+            </div> 
+        </div>
+
+        <div class="info"> <!-- 11 -->
+            <div class="cuadro">
+                <div><h4>¿CÓMO OBTENER LA RESISTENCIA 2?</h4><i class="fas fa-times-circle" onclick="cerrar(11);"></i></div>
+                <h5>Pasos:</h5>
+                <p>
+                    (1) Verifica si el circuito es el mismo al que se encuentra en la imagen, sino actualiza la página las veces necesarias hasta que sea la misma<br>
+                </p>
+                <a href="img/sem11/img1.png"><img src="img/sem11/img1.png"></a>
+
+                <p>
+                    (2) Coloca los resistores en su lugar<br>
+                </p>
+                <a href="img/sem11/img2.png"><img src="img/sem11/img2.png"></a>
+
+                <p>
+                    (3) Presiona el botón y anota los datos<br>
+                </p>
+                <a href="img/sem11/img3.png"><img src="img/sem11/img3.png"></a>
+            </div>
+        </div>
+
+        <div class="info"> <!-- 12 -->
+            <div class="cuadro">
+                <div><h4>¿CÓMO OBTENER LA RESISTENCIA 3?</h4><i class="fas fa-times-circle" onclick="cerrar(12);"></i></div>
+                <h5>Pasos:</h5>
+                <p>
+                    (1) Verifica si el circuito es el mismo al que se encuentra en la imagen, sino actualiza la página las veces necesarias hasta que sea la misma<br>
+                </p>
+                <a href="img/sem11/img1.png"><img src="img/sem11/img1.png"></a>
+
+                <p>
+                    (2) Coloca los resistores en su lugar<br>
+                </p>
+                <a href="img/sem11/img2.png"><img src="img/sem11/img2.png"></a>
+
+                <p>
+                    (3) Presiona el botón y anota los datos<br>
+                </p>
+                <a href="img/sem11/img3.png"><img src="img/sem11/img3.png"></a>
+            </div>
+        </div>
+
+        <div class="info"> <!-- 13 -->
+            <div class="cuadro">
+                <div><h4>¿CÓMO OBTENER LA RESISTENCIA 4?</h4><i class="fas fa-times-circle" onclick="cerrar(13);"></i></div>
+                <h5>Pasos:</h5>
+                <p>
+                    (1) Verifica si el circuito es el mismo al que se encuentra en la imagen, sino actualiza la página las veces necesarias hasta que sea la misma<br>
+                </p>
+                <a href="img/sem11/img1.png"><img src="img/sem11/img1.png"></a>
+
+                <p>
+                    (2) Coloca los resistores en su lugar<br>
+                </p>
+                <a href="img/sem11/img2.png"><img src="img/sem11/img2.png"></a>
+
+                <p>
+                    (3) Presiona el botón y anota los datos<br>
+                </p>
+                <a href="img/sem11/img3.png"><img src="img/sem11/img3.png"></a>
+            </div>
+        </div>
+
+        <div class="info"> <!-- 14 -->
+            <div class="cuadro">
+                <div><h4>¿CÓMO OBTENER LA RESISTENCIA 5?</h4><i class="fas fa-times-circle" onclick="cerrar(14);"></i></div>
+                <h5>Pasos:</h5>
+                <p>
+                    (1) Verifica si el circuito es el mismo al que se encuentra en la imagen, sino actualiza la página las veces necesarias hasta que sea la misma<br>
+                </p>
+                <a href="img/sem11/img1.png"><img src="img/sem11/img1.png"></a>
+
+                <p>
+                    (2) Coloca los resistores en su lugar<br>
+                </p>
+                <a href="img/sem11/img2.png"><img src="img/sem11/img2.png"></a>
+
+                <p>
+                    (3) Presiona el botón y anota los datos<br>
+                </p>
+                <a href="img/sem11/img3.png"><img src="img/sem11/img3.png"></a>
+            </div>
+        </div>
+
+        <div class="info"> <!-- 15 -->
+            <div class="cuadro">
+                <div><h4>¿CÓMO OBTENER EL VOLTAJE DE LA FUENTE?</h4><i class="fas fa-times-circle" onclick="cerrar(15);"></i></div>
+                <h5>Pasos:</h5>
+                <p>
+                    (1) Verifica si el circuito es el mismo al que se encuentra en la imagen, sino actualiza la página las veces necesarias hasta que sea la misma<br>
+                </p>
+                <a href="img/sem11/img1.png"><img src="img/sem11/img1.png"></a>
+
+                <p>
+                    (2) Coloca los resistores en su lugar<br>
+                </p>
+                <a href="img/sem11/img2.png"><img src="img/sem11/img2.png"></a>
+
+                <p>
+                    (3) Enciende el totalizador<br>
+                </p>
+                <a href="img/sem11/img4.png"><img src="img/sem11/img4.png"></a>
+
+                <p>
+                    (4) Gira la perilla<br>
+                </p>
+                <a href="img/sem11/img5.png"><img src="img/sem11/img5.png"></a>
+
+                <p>
+                    (5) Enciende la pantalla y anota el valor<br>
+                </p>
+                <a href="img/sem11/img6.png"><img src="img/sem11/img6.png"></a>
+            </div>
+        </div>
+
+
+
+        <footer>Creado por: Mauricio Soto</footer>
+
+        <script type="text/javascript" src="codigo.js"></script>
+    </body>
+</html>
